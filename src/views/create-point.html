@@ -106,6 +106,9 @@
     {% if saved %}
         {%include "partials/point-created.html"%}
     {% endif %}
+    {% if errorInsertPlaces %}
+        {%include "partials/point-create-point-error.html"%}
+    {% endif %}
 {% endblock modal%}
 
 {% block scripts %}

@@ -56,7 +56,7 @@ server.post("/create-point", (req, res) => {
     function afterInsertData(err) {
         if (err) {
             console.log(err)
-            return res.send("Erro no cadastro")
+            return res.render("create-point.html", { errorInsertPlaces: true, errorMessagePlaces: err })
         }
 
         console.log("Cadastrado com secusso")
